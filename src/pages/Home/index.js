@@ -25,7 +25,28 @@ import './styles.css'
       }
     }
   }
-
+  
+  const handleDeleteRepo = async (repoId) => {
+    // O endpoint da API para deletar um repositório é: DELETE /repos/:owner/:repo
+    const url = `https://api.github.com/repos/${currentUser.login}/${repoId}`;
+  
+    // Faça a chamada DELETE usando o fetch
+    const response = await fetch(url, {
+      method: 'DELETE',
+    });
+  
+    // Verifique se a chamada foi bem-sucedida
+    if (response.ok) {
+      console.log(`Repositório ${repoId} excluído com sucesso!`);
+  
+      // Atualize a lista de repositórios removendo o repositório excluído
+      setRepos(repos.filter(repo => repo.id !== repoId));
+    } else {
+      console.error(`Erro ao excluir o repositório ${repoId}: ${response.statusText}`);
+    }
+  }
+  
+  
   return (
     <div className="App">
      <Header />
@@ -59,16 +80,24 @@ import './styles.css'
            <hr />
            </>
           ): null}
-          {repos?.length ? (
-          <div>
-            <h4 className='repositorio'>Repositórios</h4>
-            {repos.map(repo => (
-              <ItemList title={repo.name} description={repo.description}/>
-            ))}
-            
-            
-          </div>
-          ) : null }
+    {repos?.length ? (
+  <div>
+    <h4 className='repositorio'>Repositórios</h4>
+    {repos.map(repo => (
+  <ItemList 
+    title={repo.name} 
+    description={repo.description}
+    action={
+          
+        <i className='fa fa-trash  button' onClick={() => handleDeleteRepo(repo.id)}  ></i>
+   
+    }
+  />
+))}
+
+  </div>
+) : null }
+
         </div>
      </div>
     </div>

@@ -75,3 +75,12 @@ button {
     margin: 12px 0;
     text-align: center;
 }
+.button {
+    float: right;
+    cursor: pointer;
+    margin: 20px;
+    
+}
+.button:hover {
+    color: red;
+}

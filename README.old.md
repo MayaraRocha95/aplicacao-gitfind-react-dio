@@ -1,1 +1,0 @@
-# aplicacao-gitfind-react-dio

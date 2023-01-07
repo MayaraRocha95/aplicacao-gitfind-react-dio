@@ -1,70 +1,18 @@
-# Getting Started with Create React App
+# Aplicação  Git Find 
+  ### Este é um projeto aprendido na Formação de React da Digital Innovation One
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este código parece ser um aplicativo React que busca informações de um usuário e seus repositórios do GitHub. O usuário pode inserir o nome de usuário do GitHub em um campo de entrada e, em seguida, clicar em um botão "Buscar" para obter os dados do usuário.
 
-## Available Scripts
+Quando o botão "Buscar" é clicado, uma função handleGetData é executada. Esta função faz duas chamadas para a API do GitHub usando o método fetch: uma para obter informações sobre o usuário e outra para obter uma lista de repositórios do usuário. As respostas dessas chamadas são convertidas em objetos JSON e, em seguida, usadas para atualizar os estados de componente currentUser e repos, respectivamente.
 
-In the project directory, you can run:
+Se o nome do usuário for encontrado, os dados do usuário são exibidos na tela. Se houver repositórios disponíveis, eles são exibidos em uma lista usando o componente ItemList. Cada item na lista tem um botão de lixeira que, quando clicado, chama a função handleDeleteRepo e passa o ID do repositório para ela.
 
-### `npm start`
+A função handleDeleteRepo faz uma chamada para a API do GitHub usando o método fetch e o método DELETE para excluir o repositório. Se a chamada for bem-sucedida, o repositório é removido da lista de repositórios usando o método setRepos.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Tecnologias usadas:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    * React: biblioteca JavaScript para criar interfaces de usuário
+    * fetch: método JavaScript para fazer chamadas de rede
+    * useState: hook do React para gerenciar o estado de um componente
+    * async/await: sintaxe JavaScript para trabalhar com promessas de maneira síncrona
+    * JSX: sintaxe usada em conjunto com o React para criar elementos de interface de usuário de maneira declarativa
