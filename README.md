@@ -9,6 +9,13 @@ Se o nome do usuário for encontrado, os dados do usuário são exibidos na tela
 
 A função handleDeleteRepo faz uma chamada para a API do GitHub usando o método fetch e o método DELETE para excluir o repositório. Se a chamada for bem-sucedida, o repositório é removido da lista de repositórios usando o método setRepos.
 
+![GitFind](https://user-images.githubusercontent.com/98711190/211174188-9e91f431-0ef0-4d58-8f64-1208a767856d.png)
+
+
+
+
+
+
 ## Tecnologias usadas:
 
     * React: biblioteca JavaScript para criar interfaces de usuário
