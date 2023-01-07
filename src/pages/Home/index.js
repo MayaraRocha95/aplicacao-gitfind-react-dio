@@ -18,9 +18,11 @@ import './styles.css'
             <img src="https://avatars.githubusercontent.com/u/98711190?v=4" className='profile' />
            <div>
             <h3>Mayara ocha</h3>
+            <span>@MayaraRocha95 </span>
             <p>Descrição</p>
            </div>
           </div>
+          <hr />
         </div>
      </div>
     </div>
