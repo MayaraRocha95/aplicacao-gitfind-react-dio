@@ -1,5 +1,6 @@
 import { Header } from  '../../components/Header'
- import background from '../../assets/background.png'
+import background from '../../assets/background.png'
+import ItemList from '../../components/ItemList'
 import './styles.css'
 
  function App() {
@@ -15,14 +16,23 @@ import './styles.css'
             <button>Buscar</button>
           </div>
           <div className='perfil'>
-            <img src="https://avatars.githubusercontent.com/u/98711190?v=4" className='profile' />
+            <img 
+            src="https://avatars.githubusercontent.com/u/98711190?v=4"
+             className='profile' />
            <div>
-            <h3>Mayara ocha</h3>
+            <h3>Mayara Rocha</h3>
             <span>@MayaraRocha95 </span>
             <p>Descrição</p>
            </div>
           </div>
           <hr />
+          <div>
+            <h4 className='repositorio'>Repositórios</h4>
+            <ItemList title="teste1" description="teste de descrição"/>
+            <ItemList title="teste1" description="teste de descrição"/>
+            <ItemList title="teste1" description="teste de descrição"/>
+            <ItemList title="teste1" description="teste de descrição"/>
+          </div>
         </div>
      </div>
     </div>

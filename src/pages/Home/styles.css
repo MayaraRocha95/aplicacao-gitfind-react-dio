@@ -54,18 +54,24 @@ button {
 }
 
 .perfil h3 {
-    color: #999999;
+    color: bisque;
     font-size: 24px;
     margin: 0;
 }
 .perfil span {
     display: block;
     color: #999999;
-    font-size: 12px;
+    font-size: 15px;
     margin: 0;
 }
 .perfil p {
     color: #999999;
     font-size: 12px;
     margin: 20px 0 0 0;
+}
+.repositorio {
+    font-size: 32px;
+    color:beige;
+    margin: 12px 0;
+    text-align: center;
 }
